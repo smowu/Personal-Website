@@ -11,13 +11,23 @@ function addBlur()
 {
   navbar.style.backgroundColor = "rgba(59, 60, 55,0.5)";
   navbar.style.backdropFilter = 'blur(25px)';
+  filterBlur(25);
   navbar.style.boxShadow = '0px 5px 50px rgba(0, 0, 0,0.4)';
 }
 function removeBlur()
 {
   navbar.style.backgroundColor = "rgba(59, 60, 55,0)";
   navbar.style.backdropFilter = 'blur(0px)';
+  filterBlur(0);
   navbar.style.boxShadow = '0px 0px 0px rgba(0, 0, 0,0)';
+}
+
+function filterBlur(value)
+{
+  navbar.setAttribute("style","-webkit-filter: blur(" + value + "px)");
+  navbar.setAttribute("style","-moz-filter: blur(" + value + "px)");
+  navbar.setAttribute("style","-o-filter: blur(" + value + "px)");
+  navbar.setAttribute("style","-ms-filter: blur(" + value + "px);");
 }
 
 function checkWidth() 
