@@ -5,6 +5,7 @@ const navStyle = document.querySelector("#navbar");
 var sticky = navbar.offsetTop;
 var navOpen = false;
 var isSticky = false;
+navbar.style.backdropFilter = "none";
 
 window.onresize = function() {checkWidth()};
 
