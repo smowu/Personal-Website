@@ -9,6 +9,24 @@
 
 }
 
+@font-face {
+  font-family: "Consolas"; 
+  src: local("Consolas Bold"),
+       local("Consolas-Bold"),
+       url("./assets/fonts/Consolas Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Consolas"; 
+  src: local("Consolas"),
+       local("Consolas"),
+       url("./assets/fonts/Consolas.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
   max-width: 100%;
