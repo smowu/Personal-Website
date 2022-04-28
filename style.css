@@ -350,6 +350,14 @@ body {
   position: relative;
 }
 
+.about-text {
+  position: absolute;
+  left: 150px;
+  right: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .about-text h1 {
   position: absolute;
   font-size:540px;
@@ -359,13 +367,6 @@ body {
   line-height: 540px; 
   opacity:1%;
   overflow:hidden;
-}
-
-.about-text {
-  position: absolute;
-  left: 150px;
-  right: 250px;
-  width: 100%;
 }
 
 .about-text p {
