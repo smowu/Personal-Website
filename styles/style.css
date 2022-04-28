@@ -10,6 +10,8 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Consolas", Helvetica, Courier New, Courier, monospace;
+  color: #fffaf0;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -17,8 +19,6 @@ html {
 body {
   margin: 0px;
   font-size: 28px;
-  font-family: "Consolas", Helvetica, Courier New, Courier, monospace;
-  color: #fffaf0;
   background-color: #3b3c37;
 }
 
