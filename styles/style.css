@@ -1,13 +1,3 @@
-* {
-  margin:0;
-  padding:0;
-
-  outline: 1px solid rgba(255, 0, 0,0.25) !important;
-  /*opacity: 1 !important;*/
-  visibility: visible !important
-
-}
-
 @font-face {
   font-family: "Consolas"; 
   src: local("Consolas Bold"),
@@ -24,6 +14,16 @@
        url("./assets/fonts/Consolas.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+* {
+  margin:0;
+  padding:0;
+  /*
+  outline: 1px solid rgba(255, 0, 0,0.25) !important;
+  visibility: visible !important
+  /*opacity: 1 !important;*/
+
 }
 
 html {
