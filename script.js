@@ -1,6 +1,7 @@
 window.onscroll = function() {navBarFunction()};
           
 var navbar = document.getElementById("navbar");
+const navStyle = document.querySelector("#navbar");
 var sticky = navbar.offsetTop;
 var navOpen = false;
 var isSticky = false;
@@ -10,25 +11,29 @@ window.onresize = function() {checkWidth()};
 function addBlur()
 {
   navbar.style.backgroundColor = "rgba(59, 60, 55,0.5)";
-  navbar.style.backdropFilter = 'blur(25px)';
-  filterBlur(25);
+  navbar.style.backdropFilter = "blur(25px)";
+  //navStyle.classList.toggle('navbar-blur');
   navbar.style.boxShadow = '0px 5px 50px rgba(0, 0, 0,0.4)';
 }
 function removeBlur()
 {
   navbar.style.backgroundColor = "rgba(59, 60, 55,0)";
-  navbar.style.backdropFilter = 'blur(0px)';
-  filterBlur(0);
+  navbar.style.backdropFilter = "blur(0px)";
+  //navStyle.classList.toggle('navbar-no-blur');
   navbar.style.boxShadow = '0px 0px 0px rgba(0, 0, 0,0)';
 }
-
-function filterBlur(value)
-{
-  navbar.setAttribute("style","-webkit-filter: blur(" + value + "px)");
-  navbar.setAttribute("style","-moz-filter: blur(" + value + "px)");
-  navbar.setAttribute("style","-o-filter: blur(" + value + "px)");
-  navbar.setAttribute("style","-ms-filter: blur(" + value + "px);");
-}
+/*
+window.onload = function(){
+  document.querySelector('.btn').onclick = function(){
+      if(this.className.match('btn_red')) {
+          this.className = 'btn';
+      }
+      else {
+          this.className = 'btn btn_red';
+      }
+  };
+};
+*/
 
 function checkWidth() 
 {

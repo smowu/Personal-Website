@@ -1,6 +1,13 @@
 * {
   margin:0;
   padding:0;
+
+  /*
+  outline: 1px solid rgba(255, 0, 0,0.25) !important;
+  /*opacity: 1 !important;
+  visibility: visible !important
+  */
+
 }
 
 html {
@@ -50,11 +57,11 @@ body {
   left: 50%; /* % of surrounding element */
   top: 50%;
   transform: translate(-50%, -50%); /* % of current element */
-  filter: blur(15px);
-  -webkit-filter: blur(15px);
-  -moz-filter: blur(15px);
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
 }
 
 .video-overlay {
@@ -181,6 +188,13 @@ body {
     backdrop-filter: none;
     box-shadow: none;
   }
+  .title {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .main-section p > a {
+    right: 75px;
+  }
 }
 @media only screen and (max-width: 900px) {
   .nav-header {
@@ -189,7 +203,39 @@ body {
   #logo {
     padding: 32px;
   }
+  #navbar {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    -moz-backdrop-filter: blur(25px);
+    -o-backdrop-filter: blur(25px);
+    -ms-backdrop-filter: blur(25px);
+  }
+  .title {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  .main-section p > a {
+    left: 0px;
+    right: 0px;
+    margin: auto;
+  }
 }
+
+/*
+.navbar-blur {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  -moz-backdrop-filter: blur(25px);
+  -o-backdrop-filter: blur(25px);
+  -ms-backdrop-filter: blur(25px);
+}
+
+#navbar-no-blur {
+  background-color: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+*/
 
 .sticky 
 {
@@ -218,26 +264,28 @@ body {
   font-size: 96px;
   font-size: calc(2.75vw + 2.75vh);
   padding-top: 40vh;
-  padding-left:100px;
   color: #dac898;
   z-index: -1;
 }
 
 .main-section p > a {
   position: absolute;
-  right: 75px;
   bottom: 5vh;
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
-  background-color: rgba(219, 201, 154,0.05);
+  background-color: rgba(219, 201, 154,0.1);
   color: #dac898;
   backdrop-filter: blur(50px);
-  box-shadow: 0px 5px 50px rgba(0, 0, 0,0.4);
+  -webkit-backdrop-filter: blur(100px);
+  -moz-backdrop-filter: blur(100px);
+  -o-backdrop-filter: blur(100px);
+  -ms-backdrop-filter: blur(100px);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0,0.2);
   text-align: center;
   vertical-align: middle;
-  line-height: 64px;
-  width: 360px;
-  height: 64px;
+  line-height: 48px;
+  width: 320px;
+  height: 48px;
   border-radius: 100px;
 }
 
@@ -260,6 +308,7 @@ body {
 }
 
 #about-container {
+  position: relative;
   width: 100%;
   height: 810px;
   background-color: hsl(72, 4%, 10%);
@@ -269,7 +318,7 @@ body {
 .about-header {
   width: 100%;
   height: 100px;
-  background-color: rgba(53, 53, 53,0.1); /*temp*/
+  background-color: rgba(53, 53, 53,0); /*temp*/
 }
 
 .about-header h1 {
@@ -280,27 +329,45 @@ body {
   z-index:2;
 }
 
-.about-big h1 {
-  left:480px;
-  position:relative;
+.about-content {
+  position: relative;
+}
+
+.about-text h1 {
+  position: absolute;
   font-size:540px;
+  left:480px;
   text-align: center;
   vertical-align: middle;
-  line-height: 100px; 
+  line-height: 540px; 
   opacity:1%;
 }
 
-#about-container p {
-  position: relative;
+.about-text {
+  position: absolute;
+  left: 150px;
+  right: 250px;
+  width: 100%;
+}
+
+.about-text p {
+  position: absolute;
+  /*
   margin-left: 500px;
   margin-right: 250px;
-  font-size: 24px;
+  */
+  left: 500px;
+  right: 250px;
+  top: 100px;
+  font-size: 20px;
   text-align: justify;
+  overflow:visible;
 }
 
 .picture-of-me img {
-  position:absolute;
-  padding-left: 200px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
   width: clamp(150px, 10vw + 250px, 480px);
   z-index:5;
 }
