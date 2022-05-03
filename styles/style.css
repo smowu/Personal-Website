@@ -294,6 +294,9 @@ body {
   margin-top: -24px;
   filter: invert(10%) sepia(17%) saturate(615%) hue-rotate(353deg) brightness(90%) contrast(90%);
 }
+#logo:hover {
+  filter: none;
+}
 
 .main-section {
   height: 100vh;
@@ -303,7 +306,6 @@ body {
 .title {
   position: relative;
   font-size: clamp(0.5rem, 3vw + 0.5rem, 4rem);
-  /*font-size: calc(2.75vw + 2.75vh);*/
   padding-top: 42vh;
   color: #dac898;
   z-index: -1;

@@ -16,10 +16,12 @@ function addBlur() {
   navbar.style.boxShadow = '0px 5px 50px rgba(0, 0, 0,0.4)';
 }
 function removeBlur() {
-  navbar.style.backgroundColor = "transparent";
-  navbar.style.backdropFilter = "blur(0px)";
-  //navStyle.classList.toggle('navbar-no-blur');
-  navbar.style.boxShadow = '0px 0px 0px rgba(0, 0, 0,0)';
+  if (!isSticky) {
+    navbar.style.backgroundColor = "transparent";
+    navbar.style.backdropFilter = "blur(0px)";
+    //navStyle.classList.toggle('navbar-no-blur');
+    navbar.style.boxShadow = '0px 0px 0px rgba(0, 0, 0,0)';
+  }
 }
 
 /*
@@ -37,8 +39,7 @@ window.onload = function(){
 
 function checkWidth() {
   if (window.screen.width > 900 && navOpen) {
-    if (!isSticky)
-      removeBlur();
+    removeBlur();
     const nav = document.querySelector("#nav-links");
     nav.classList.toggle('nav-open');
     navOpen = false;
