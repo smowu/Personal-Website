@@ -9,15 +9,13 @@ navbar.style.backdropFilter = "blur(0px)";
 
 window.onresize = function() {checkWidth()};
 
-function addBlur()
-{
+function addBlur() {
   navbar.style.backgroundColor = "rgba(26, 27, 24, 0.75)";
   navbar.style.backdropFilter = "blur(25px)";
   //navStyle.classList.toggle('navbar-blur');
   navbar.style.boxShadow = '0px 5px 50px rgba(0, 0, 0,0.4)';
 }
-function removeBlur()
-{
+function removeBlur() {
   navbar.style.backgroundColor = "transparent";
   navbar.style.backdropFilter = "blur(0px)";
   //navStyle.classList.toggle('navbar-no-blur');
@@ -37,8 +35,7 @@ window.onload = function(){
 };
 */
 
-function checkWidth() 
-{
+function checkWidth() {
   if (window.screen.width > 900 && navOpen) {
     if (!isSticky)
       removeBlur();
@@ -48,16 +45,13 @@ function checkWidth()
   }
 }
 
-function navBarFunction() 
-{
+function navBarFunction() {
   if (window.pageYOffset >= sticky) 
   {
     navbar.classList.add("sticky")
     isSticky = true;
     addBlur();
-  } 
-  else 
-  {
+  } else {
     navbar.classList.remove("sticky");
     isSticky = false;
     if (!navOpen)
@@ -105,13 +99,13 @@ TxtType.prototype.tick = function() {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 125 - Math.random() * 100;
 
   if (this.isDeleting) { 
-    delta /= 1; 
+    delta /= 1;
   }
 
   if (!this.isDeleting && this.txt === fullTxt) {
@@ -122,10 +116,11 @@ TxtType.prototype.tick = function() {
     this.loopNum++;
     delta = 1000;
   }
-
+  
   setTimeout( function() {
     that.tick();
   }, delta);
+
 };
 
 window.onload = function() {
