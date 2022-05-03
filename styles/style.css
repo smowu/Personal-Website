@@ -420,6 +420,7 @@ body {
 
 .picture-of-me {
   flex-basis: 50%;
+  margin-right:50px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -439,7 +440,7 @@ body {
 .interests-container {
   position: relative;
   width: 100%;
-  height: 540px;
+  height: max-content;
   background-color: hsl(4, 53%, 43%);
 }
 
@@ -483,3 +484,25 @@ footer {
   padding:14px;
 }
 
+.interests-content {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interest-box {
+  display: inline-block;
+  padding: 25px;
+  font-size: 24px;
+  color: #dac898;
+  text-align: center;
+}
+
+.interest-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  background-color: #dac898;
+  border-radius: 50%;
+}
