@@ -7,6 +7,11 @@ var navOpen = false;
 var isSticky = false;
 navbar.style.backdropFilter = "blur(0px)";
 
+function backToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 window.onresize = function() {checkWidth()};
 
 function addBlur() {
@@ -80,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Typing animation
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;

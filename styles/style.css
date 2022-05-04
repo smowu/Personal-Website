@@ -163,6 +163,7 @@ body {
 #nav-links a:hover {
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
+  cursor: pointer;
 }
 
 #nav-links a.active {
@@ -376,13 +377,13 @@ body {
   position: relative;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1200px) {
   .about-content {
     display: flex;
     padding: 50px 200px 50px 200px;
   }
 }
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1200px) {
   .about-content {
     padding: 50px 50px 100px 50px;
   }
