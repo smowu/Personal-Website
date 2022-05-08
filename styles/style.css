@@ -511,8 +511,11 @@ body {
   width: 150px;
   height: 150px;
   margin-bottom: 20px;
-  background-color: #dac898;
   border-radius: 50%;
+}
+
+.interest-icon > img {
+  filter: invert(90%) sepia(17%) saturate(615%) hue-rotate(353deg) brightness(90%) contrast(90%);
 }
 
 footer {
@@ -541,7 +544,7 @@ footer {
   margin: 0px;
 }
 .footer-link a {
-  line-height: 36px;
+  line-height: 32px;
   color: #1a1b18;
   text-decoration: none;
 }
@@ -573,7 +576,7 @@ footer {
 
 .link-icons {
   position: absolute;
-  right: 100px;
+  right: 0px;
   bottom: 0px;
   padding: 0px;
 }
@@ -648,4 +651,50 @@ footer {
 
 .resume-link > p > a:hover{
   background-color: rgba(166, 58, 51,0.25);
+}
+
+.signature-container {
+  width: 100%;
+}
+
+.signature {
+  display: flex;
+  justify-content: center;
+}
+
+.signature-container > p {
+  display: flex;
+  justify-content: center;
+}
+
+.signature > img {
+  filter: invert(89%) sepia(21%) saturate(336%) hue-rotate(318deg) brightness(108%) contrast(106%);
+}
+
+.achievements-container {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  background-color: #dac898;
+}
+
+.achievements-header {
+  width: 100%;
+  height: 100px;
+}
+
+.achievements-header h1 {
+  font-size: 48px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  color:#1a1b18;
+  z-index:2;
+}
+
+.achievements-content {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
