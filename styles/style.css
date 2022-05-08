@@ -139,7 +139,6 @@ body {
 .nav-link {
   list-style: none;
   margin: 0px;
-  /*width: 100%;*/
 }
 
 .nav-links {
@@ -382,6 +381,9 @@ body {
     display: flex;
     padding: 50px 200px 50px 200px;
   }
+  .footer-items {
+    display: flex;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .about-content {
@@ -393,6 +395,9 @@ body {
   }
   .about-text > table {
     width: 100%;
+  }
+  .footer-items {
+    display: inline;
   }
 }
 
@@ -459,37 +464,11 @@ body {
   z-index:2;
 }
 
-footer {
-  color: #1a1b18;
-  font-size: 24px;
-}
-
-.footer {
-  position: relative;
-  width: 100%;
-  height: 360px;
-  background-color: #76b598;
-}
-
-.copyright {
-  position: absolute;
-  width: 100%;
-  height: 48px;
-  background-color: #dac898;
-}
-
-.copyright p {
-  color: hsl(72, 4%, 10%);
-  font-size: 16px;
-  text-align: center;
-  padding:14px;
-}
-
 .interests-content {
   padding: 50px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .interest-box {
@@ -506,4 +485,81 @@ footer {
   margin-bottom: 20px;
   background-color: #dac898;
   border-radius: 50%;
+}
+
+footer {
+  color: #1a1b18;
+  font-size: 20px;
+}
+
+#footer-container {
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+
+.footer-content {
+  padding: 50px 100px 50px 100px;
+  background-color: #76b598;
+}
+
+.footer-items {
+  position: relative;
+  width: 100%;
+}
+
+.footer-link {
+  list-style: none;
+  margin: 0px;
+}
+.footer-link a {
+  line-height: 36px;
+  color: #1a1b18;
+  text-decoration: none;
+}
+.footer-link a:hover {
+  opacity: 50%;
+}
+
+.footer-logo {
+  width: 360px;
+}
+
+.footer-logo > a {
+  filter: invert(92%) sepia(7%) saturate(695%) hue-rotate(39deg) brightness(95%) contrast(93%);
+}
+
+.copyright {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  background-color: #dac898;
+}
+
+.copyright p {
+  color: hsl(72, 4%, 10%);
+  font-size: 16px;
+  text-align: center;
+  padding:14px;
+}
+
+.link-icons {
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  padding: 0px;
+}
+
+.link-box {
+  display: inline-block;
+  text-align: center;
+}
+
+.link-icon {
+  padding: 2px;
+  filter: invert(8%) sepia(7%) saturate(695%) hue-rotate(39deg) brightness(95%) contrast(93%);
+}
+
+.link-icon:hover {
+  opacity: 75%;
 }
