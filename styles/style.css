@@ -61,7 +61,7 @@ html {
 
 body {
   margin: 0px;
-  font-size: 28px;
+  font-size: 20px;
   background-color: hsl(72, 4%, 10%);
 }
 
@@ -235,6 +235,9 @@ body {
     display: flex;
   }
   
+  .resume-link {
+    display: flex;
+  }
 }
 @media only screen and (max-width: 900px) {
   #logo {
@@ -260,6 +263,9 @@ body {
     margin-right: 75px;
   }
   
+  .resume-link {
+    display: inline;
+  }
 }
 
 /*
@@ -384,6 +390,17 @@ body {
   .footer-items {
     display: flex;
   }
+
+  .resume {
+    display: flex;
+    padding: 150px 0px 150px 0px;
+  }
+  .resume-preview {
+    margin: auto auto auto auto;
+  }
+  .resume-link-container {
+    margin: auto auto auto -100px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .about-content {
@@ -398,6 +415,17 @@ body {
   }
   .footer-items {
     display: inline;
+  }
+
+  .resume {
+    padding: 100px 50px 100px 50px;
+  }
+  .resume-preview {
+    margin: auto auto 50px auto;
+    
+  }
+  .resume-link-container {
+    margin: auto auto auto auto;
   }
 }
 
@@ -439,7 +467,7 @@ body {
   border-radius: 75px;
   margin: auto;
   display: block;
-  box-shadow: -10px 10px 0px #76b598;
+  box-shadow: -10px 10px 0px #a63a33;
   z-index:5;
 }
 
@@ -562,4 +590,62 @@ footer {
 
 .link-icon:hover {
   opacity: 75%;
+}
+
+.resume {
+  position: relative;
+  height: max-content;
+  /*
+  display: flex;
+  padding: 100px;
+  */
+}
+
+.resume-preview {
+  height: 600px;
+  width: 420px;
+  flex: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: -10px 10px 0px #76b598;
+  display: block;
+  
+}
+
+.resume-preview > img {
+  height: 600px;
+  width: 420px;
+  object-fit: cover;
+  object-position: 0px 0px;
+  border-radius: 20px;
+  margin: auto;
+  display: block;
+  z-index:5;
+}
+
+.resume-link-container > p {
+  font-size: 48px;
+  width: 400px;
+  padding: 20px;
+}
+
+.resume-link {
+  margin: auto;
+}
+
+.resume-link > p {
+  padding: 20px;
+}
+
+.resume-link > p > a {
+  border: 2px solid;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  color: #dac898;
+  text-align: center;
+}
+
+.resume-link > p > a:hover{
+  background-color: rgba(166, 58, 51,0.25);
 }
