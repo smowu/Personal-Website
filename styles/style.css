@@ -390,12 +390,11 @@
   width: 60%;
 }
 .programming-portfolio-img>img {
-  border-radius: 20px;
+  border-radius: 15px;
   display: block;
   height: 100%;
   margin:auto;
   object-fit: cover;
-  object-position: 0px 0px;
   width: 100%;
 }
 .programming-portfolio-img-container {
