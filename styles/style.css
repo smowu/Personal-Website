@@ -373,6 +373,14 @@
 .personal-portfolio {
   height: 100%;
   width: 50%;
+  position: relative;
+}
+.personal-portfolio h2 {
+  display: flex;
+  height: 270px;
+  justify-content: center;
+  line-height: 270px;
+  vertical-align: middle;
 }
 .picture-of-me {
   flex-basis: 50%;
@@ -803,6 +811,12 @@
   }
   .nav-header {
     display: block;
+  }
+  .personal-portfolio {
+    width: 100%;
+  }
+  .portfolio-personal {
+    display: inline;
   }
   .resume-link {
     display: inline;
