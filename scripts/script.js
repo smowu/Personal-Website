@@ -1,5 +1,6 @@
 window.onscroll = function() {navBarFunction()};
-          
+
+var header = document.getElementById("header");
 var navbar = document.getElementById("navbar");
 const navStyle = document.querySelector("#navbar");
 var sticky = navbar.offsetTop;
@@ -14,6 +15,20 @@ function backToTop() {
 
 window.onresize = function() {checkWidth()};
 
+function changeNavPosition() {
+  if (navOpen) {
+    if (isSticky)
+      navbar.style.position = "";
+    else
+      navbar.style.position = "absolute";
+  } else {
+    if (isSticky)
+      navbar.style.position = "";
+    else
+      navbar.style.position = "relative";
+  }
+}
+
 function addBlur() {
   navbar.style.backgroundColor = "rgba(26, 27, 24, 0.75)";
   navbar.style.backdropFilter = "blur(25px)";
@@ -24,7 +39,6 @@ function removeBlur() {
   if (!isSticky) {
     navbar.style.backgroundColor = "transparent";
     navbar.style.backdropFilter = "blur(0px)";
-    //navStyle.classList.toggle('navbar-no-blur');
     navbar.style.boxShadow = '0px 0px 0px rgba(0, 0, 0,0)';
   }
 }
@@ -48,6 +62,7 @@ function checkWidth() {
     const nav = document.querySelector("#nav-links");
     nav.classList.toggle('nav-open');
     navOpen = false;
+    changeNavPosition();
   }
 }
 
@@ -60,9 +75,11 @@ function navBarFunction() {
   } else {
     navbar.classList.remove("sticky");
     isSticky = false;
-    if (!navOpen)
+    if (!navOpen) {
       removeBlur();
+    }
   }
+  changeNavPosition();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,11 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
     else
       navOpen = false;
 
-    if (navOpen)
+    if (navOpen) {
       addBlur();
-    else
+    }
+    else {
       removeBlur();
-
+    }
+    changeNavPosition();
   });
 });
 
