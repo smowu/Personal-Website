@@ -439,6 +439,7 @@
 .programming-portfolio>h1 {
   padding: 24px 24px 24px 48px;
   height: 150px;
+  width: 50%;
   display: table-caption;
 }
 .programming-portfolio-button {
@@ -748,6 +749,9 @@
   }
   .about-text>table {
     width: 100%;
+  }
+  .footer-content {
+    padding: 50px 50px 50px 50px;
   }
   .footer-items {
     display: inline;
