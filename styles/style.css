@@ -148,6 +148,8 @@
 .contact-header h1 {
   font-size: 48px;
   line-height: auto;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: center;
   z-index: 2;
 }
