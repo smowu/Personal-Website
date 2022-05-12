@@ -224,6 +224,9 @@
 .footer-logo {
   width: 360px;
 }
+.footer-logo a {
+  text-decoration: none;
+}
 .footer-logo a>img {
   content: url("../assets/images/LogoUiTM.png");
   display: inline-block;
@@ -309,6 +312,7 @@
 }
 .link-icons p {
   font-size: 16px;
+  text-decoration: none;
 }
 .link-github a>img {
   content: url("../assets/icons/icon-github.png");
