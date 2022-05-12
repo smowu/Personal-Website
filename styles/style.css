@@ -312,7 +312,6 @@
 }
 .link-icons p {
   font-size: 16px;
-  text-decoration: none;
 }
 .link-github a>img {
   content: url("../assets/icons/icon-github.png");
@@ -971,7 +970,7 @@ form {
     padding: 50px 200px 50px 200px;
   }
   .footer-items {
-    display: flex;
+    display: inline-flex;
   }
   .portfolio-programming {
     display: flex;
