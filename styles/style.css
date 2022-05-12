@@ -15,12 +15,13 @@
   width: 100%;
 }
 #logo {
-  filter: invert(10%) sepia(17%) saturate(615%) hue-rotate(353deg) brightness(90%) contrast(90%);
   margin-top: -24px;
   position: absolute;
 }
-#logo:hover {
-  filter: none;
+#logo a>img {
+  content: url("../assets/images/image-LogoUiTM.png");
+  display: inline-block;
+  height: 48px;
 }
 #navbar {
   width: 100%;
@@ -125,24 +126,26 @@
   vertical-align: top;
 }
 .contact-container {
-  background-color: #1a1b18;
   height: max-content;
   position: relative;
   width: 100%;
 }
 .contact-content {
+  background-color: #fffaf0;
+  color:#1a1b18;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
 }
 .contact-header {
+  background-color: #fffaf0;
+  color:#1a1b18;
   height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
 }
 .contact-header h1 {
-  color: #fffaf0;
   font-size: 48px;
   line-height: auto;
   text-align: center;
@@ -221,8 +224,10 @@
 .footer-logo {
   width: 360px;
 }
-.footer-logo>a {
-  filter: invert(92%) sepia(7%) saturate(695%) hue-rotate(39deg) brightness(95%) contrast(93%);
+.footer-logo a>img {
+  content: url("../assets/images/LogoUiTM.png");
+  display: inline-block;
+  height: 48px;
 }
 .header {
   padding: 20px;
@@ -286,6 +291,9 @@
   display: inline-block;
   text-align: center;
 }
+.link-box a>img {
+  height: 32px;
+}
 .link-icon {
   filter: invert(8%) sepia(7%) saturate(695%) hue-rotate(39deg) brightness(95%) contrast(93%);
   padding: 2px;
@@ -298,6 +306,41 @@
   padding: 0px;
   position: absolute;
   right: 0px;
+}
+.link-icons p {
+  font-size: 16px;
+}
+.link-github a>img {
+  content: url("../assets/icons/icon-github.png");
+  display: inline-block;
+}
+.link-facebook a>img {
+  content: url("../assets/icons/icon-facebook.png");
+  display: inline-block;
+}
+.link-instagram a>img {
+  content: url("../assets/icons/icon-instagram.png");
+  display: inline-block;
+}
+.link-twitter a>img {
+  content: url("../assets/icons/icon-twitter.png");
+  display: inline-block;
+}
+.link-youtube a>img {
+  content: url("../assets/icons/icon-youtube.png");
+  display: inline-block;
+}
+.link-deviantart a>img {
+  content: url("../assets/icons/icon-deviantart.png");
+  display: inline-block;
+}
+.link-artstation a>img {
+  content: url("../assets/icons/icon-artstation.png");
+  display: inline-block;
+}
+.link-whatsapp a>img {
+  content: url("../assets/icons/icon-whatsapp.png");
+  display: inline-block;
 }
 .main-section {
   height: 100vh;
@@ -382,20 +425,37 @@
   line-height: 270px;
   vertical-align: middle;
 }
-.picture-of-me {
+.picture-of-me1 {
   flex-basis: 50%;
   margin-bottom: 50px;
   margin-right: 50px;
   margin-top: 50px;
 }
-.picture-of-me img {
+.picture-of-me2 {
+  flex-basis: 50%;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.picture-of-me1 img {
   border-radius: 75px;
   box-shadow: -10px 10px 0px #a63a33;
   display: block;
-  height: 360px;
+  height: auto;
   margin: auto;
   object-fit: cover;
-  object-position: 0px -50px;
+  object-position: 0px 0px;
+  width: 360px;
+  z-index: 5;
+}
+.picture-of-me2 img {
+  border-radius: 75px;
+  box-shadow: -10px 10px 0px #a63a33;
+  display: block;
+  height: auto;
+  margin: auto;
+  object-fit: cover;
+  object-position: 0px 0px;
   width: 360px;
   z-index: 5;
 }
@@ -579,6 +639,78 @@
   display: flex;
   justify-content: center;
 }
+form {
+  backdrop-filter: blur(25px);
+    -moz-backdrop-filter: blur(25px);
+    -ms-backdrop-filter: blur(25px);
+    -o-backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  background-color: rgba(26, 27, 24,0.8);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999999;
+}
+.button-signup {
+  color: #fffaf0;
+  border: solid 3px #a63a33;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: #a63a33;
+  border-radius: 50px;
+  margin: 0px 0px 5px 0px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.button-guest {
+  color: #76b598;
+  border:solid 3px #76b598;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: #fffaf0;
+  border-radius: 50px;
+  margin: 5px 0px 0px 0px;
+  padding-bottom: 0px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.button-guest,
+.button-signup:hover {
+  cursor: pointer;
+}
+.signup-content {
+  background-color: #fffaf0;
+  border-radius: 25px;
+  box-shadow: -10px 10px 0px #a63a33;
+  color:#1a1b18;
+  height: 600px;
+  padding: 25px;
+  position: fixed;
+  width: 450px;
+  justify-content: left;
+}
+.signup-content h1 {
+  font-size: 48px;
+  padding-top: 100px;
+}
+.signup-content-drop {
+  border-radius: 25px;
+  box-shadow: 10px -10px 0px #76b598;
+  padding: 25px;
+  height: 600px;
+  width: 450px;
+}
+.signup-content input {
+  background: transparent;
+  font-family: inherit;
+  font-size: 20px;
+  width: 100%;
+}
 .social-box {
   color: #dac898;
   display: inline-block;
@@ -587,12 +719,15 @@
 }
 .social-icon {
   border-radius: 50%;
-  height: 64px;
+  height: 128px;
   margin-bottom: 20px;
-  width: 64px;
+  width: 128px;
+  text-decoration: none;
+  color:#fffaf0;
 }
 .social-icon>img {
-  filter: invert(90%) sepia(17%) saturate(615%) hue-rotate(353deg) brightness(90%) contrast(90%);
+  filter: invert(99%) sepia(50%) saturate(601%) hue-rotate(297deg) brightness(100%) contrast(111%);
+  width: 128px;
 }
 .socials-container {
   background-color: #1a1b18;

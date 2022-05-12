@@ -104,6 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+function removeSignup() {
+  const signup = document.querySelector("#signup");
+  signup.remove();
+}
+
 // Typing animation
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
