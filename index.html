@@ -16,15 +16,52 @@
       <div class="signup-content">
         <h1>Register</h1>
         <br><hr><br>
-        Name:<br><input>
-        <br><br>
-        Email:<br><input>
+        <fieldset class="signup-field" id="field1">
+          <legend id="legend1"><b>Name:</b></legend>
+          <input type="text" id="userName">
+        </fieldset>
+        <fieldset class="signup-field" id="field2">
+          <legend id="legend2"><b>Email:</b></legend>
+          <input type="text" id="userEmail">
+        </fieldset>
+        <br>
+        <div class="signup-gender">
+          <b>Gender:</b>
+          <input type="radio" name="gend">Male
+          <div class="check"></div>
+          <input type="radio" name="gend">Female
+          <div class="check"></div>
+        </div>
+        <div class="signup-dob">
+          <b>Date of Birth:</b>
+          <select name="DOB-day">
+            <option>1</option>
+          </select>
+          <select name="DOB-month">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <select name="DOB-year">
+            <option>2022</option>
+          </select>
+        </div>
         <br><br><hr><br>
+        
         <button class="button-signup">
           <p><b>Sign Up</b></p>
         </button>
         <button onclick="removeSignup()" class="button-guest">
-          <p><b>View as Guest</b></p>
+          <p><b>Continue as Guest</b></p>
         </button>
       </div>
     </form>
@@ -98,8 +135,8 @@
               always seek for a better solution. While I do not have any formal working
               experience in computer science field, I do have experience working as a
               self-taught freelance illustrator with clients around the world. My goal 
-              is to utilise both my artistic and programming skills and fuse them 
-              together to create something remarkable.
+              is to become a graphics engineer/programmer by utilizing both my artistic 
+              and programming skills.
               <br></br>
               This is my first attempt at making a website c:
             </p>

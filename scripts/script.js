@@ -109,6 +109,46 @@ function removeSignup() {
   signup.remove();
 }
 
+function setFocused1() {
+  var resultName = document.querySelectorAll("#field1");
+  for (result of resultName) {
+      result.classList.add('focused');
+  }
+}
+
+function unsetFocused1() {
+  var resultName = document.querySelectorAll("#field1");
+  for (result of resultName) {
+      result.classList.remove('focused');
+  }
+}
+
+function setFocused2() {
+  var resultEmail = document.querySelectorAll("#field2");
+  for (result of resultEmail) {
+      result.classList.add('focused');
+  }
+    
+}
+
+function unsetFocused2() {
+  var resultEmail = document.querySelectorAll("#field2");
+  for (result of resultEmail) {
+      result.classList.remove('focused');
+  }
+}
+
+var resultName = document.querySelectorAll("#userName");
+var resultEmail = document.querySelectorAll("#userEmail");
+for (result of resultName) {
+  result.addEventListener("focusin", setFocused1);
+  result.addEventListener("focusout", unsetFocused1);
+}
+for (result of resultEmail) {
+  result.addEventListener("focusin", setFocused2);
+  result.addEventListener("focusout", unsetFocused2);
+}
+
 // Typing animation
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;

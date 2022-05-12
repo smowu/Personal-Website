@@ -699,9 +699,23 @@ form {
   width: 450px;
   justify-content: left;
 }
+.signup-content fieldset {
+  display: flex;
+  justify-content: center;
+  border: solid 3px #1a1b18;
+  border-radius: 100px;
+}
+.signup-field.focused {
+  border: solid 3px #76b598;
+}
+.signup-content legend {
+  font-size: 18px;
+  margin-left: 24px;
+  padding:12px;
+}
 .signup-content h1 {
   font-size: 48px;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .signup-content-drop {
   border-radius: 25px;
@@ -712,10 +726,53 @@ form {
 }
 .signup-content input {
   background: transparent;
+  border: none;
   font-family: inherit;
   font-size: 20px;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  outline: none;
+  width: 90%;
+}
+.signup-dob b {
+  font-size: 18px;
+}
+.signup-gender {
+  display: flex;
+  font-size: 16px;
+  position: relative;
+  align-items: center;
+  vertical-align: middle;
   width: 100%;
 }
+.signup-gender b {
+  font-size: 18px;
+}
+.signup-gender .check {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1a1b18;
+  display: inline-block;
+  opacity: 0;
+}
+.signup-gender input[type="radio"] {
+  background-color: none;
+  cursor: pointer;
+  margin: 10px;
+  font: inherit;
+  color: currentColor;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #1a1b18;
+  border-radius: 50%;
+  position: relative;
+}
+.signup-gender input:checked + .check{
+  opacity: 0;
+}
+
+
 .social-box {
   color: #dac898;
   display: inline-block;
