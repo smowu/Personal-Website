@@ -123,6 +123,10 @@
   vertical-align: middle;
   z-index: 2;
 }
+.button-container {
+  position: relative;
+  margin-bottom: 24px;
+}
 .col1 {
   padding-right: 12px;
   text-align: right;
@@ -198,6 +202,68 @@
   line-height: 100px;
   text-align: center;
   z-index: 2;
+}
+
+.fav-games-container {
+  background-color: #1a1b18;
+  height: max-content;
+  position: relative;
+  width: 100%;
+}
+.fav-games-header h1 {
+  color: #fffaf0;
+  font-size: 48px;
+  line-height: 100px;
+  text-align: center;
+  z-index: 2;
+}
+.game-box {
+  color: #fffaf0;
+  display: inline-block;
+  font-size: 24px;
+  padding: 25px;
+}
+.game-icon {
+  border-radius: 50%;
+  height: 160px;
+  margin-bottom: 20px;
+  width: 200px;
+  white-space: nowrap;
+}
+.game-icon>img {
+  filter: invert(99%) sepia(50%) saturate(601%) hue-rotate(297deg) brightness(100%) contrast(111%);
+}
+.fav-games-content {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+
+.fav-songs-container {
+  background-color: #1a1b18;
+  height: max-content;
+  position: relative;
+  width: 100%;
+}
+.fav-songs-header h1 {
+  color: #fffaf0;
+  font-size: 48px;
+  line-height: 100px;
+  text-align: center;
+  z-index: 2;
+}
+.fav-songs-container iframe {
+  margin: 12px;
+  border: solid 3px #fffaf0;
+}
+.fav-songs {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+  height: max-content;
 }
 .flex-nav {
   display: flex;
@@ -720,7 +786,7 @@ form {
   font-family: inherit;
   font-size: 18px;
   border-radius: 50px;
-  margin: 0px 0px 5px 0px;
+  margin: 0px 0px 4px 0px;
   position: relative;
   height: 50px;
   width: 100%;
@@ -737,8 +803,7 @@ form {
   font-size: 18px;
   background-color: #fffaf0;
   border-radius: 50px;
-  margin: 5px 0px 0px 0px;
-  padding-bottom: 0px;
+  margin: 4px 0px 0px 0px;
   position: relative;
   height: 50px;
   width: 100%;
