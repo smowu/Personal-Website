@@ -88,10 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     changeNavPosition();
   });
+
+  const checkInfo = document.querySelector("confirm");
+  checkInfo.addEventListener("checked", () => {
+    var signup = document.getElementById("buttonSignup");
+    signup.disabled = "false";
+    signup.classList.add("enable");
+  });
 });
 
 function removeSignup() {
-  const signup = document.querySelector("#signup");
+  const signup = document.getElementById("signup");
   signup.remove();
 }
 
@@ -216,6 +223,16 @@ monthSelect.onchange = function() {
 }
 daySelect.onchange = function() {
   previousDay = daySelect.value;
+}
+
+function welcome() {
+  var name = document.getElementById("userName").value;
+
+  if (name != "") {
+    alert("Welcome " + name);
+    removeSignup();
+  }
+
 }
 
 // Typing animation

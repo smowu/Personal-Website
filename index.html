@@ -18,11 +18,11 @@
         <br><hr><br>
         <fieldset class="signup-field" id="field1" onclick="focusField(this)">
           <legend id="legend1"><b>Name:</b></legend>
-          <input type="text" id="userName">
+          <input type="text" id="userName" name="userName">
         </fieldset>
         <fieldset class="signup-field" id="field2" onclick="focusField(this)">
           <legend id="legend2"><b>Email:</b></legend>
-          <input type="text" id="userEmail">
+          <input type="text" id="userEmail" name="userEmail">
         </fieldset>
         <br>
         <div class="signup-gender">
@@ -47,7 +47,7 @@
         </div>
         <br><hr><br>
         
-        <button class="button-signup">
+        <button onclick="welcome()" class="button-signup" id="buttonSignup" disabled="true">
           <p><b>Sign Up</b></p>
         </button>
         <button onclick="removeSignup()" class="button-guest">
@@ -56,7 +56,7 @@
       </div>
     </form>
     <div id="main" class="main-section">
-      <div class="header" id="header"></div>
+      <div class="header" id="header"><p><b>Welcome Guest!</b></p></div>
       <div id="navbar">
         <script src="./scripts/script.js"></script>
         <div class="container flex-nav">
@@ -125,8 +125,8 @@
               always seek for a better solution. While I do not have any formal working
               experience in computer science field, I do have experience working as a
               self-taught freelance illustrator with clients around the world. My goal 
-              is to become a graphics engineer/programmer by utilizing both my artistic 
-              and programming skills.
+              is to get into game/multi media industry and become a graphics 
+              engineer/programmer by utilizing both my artistic and programming skills.
               <br></br>
               This is my first attempt at making a website c:
             </p>

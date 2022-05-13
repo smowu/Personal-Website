@@ -43,11 +43,13 @@
   background-color: #a63a33;
   box-shadow: 0px 0px 0px 3px #dac898 inset;
   color: #dac898;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #nav-links a.active:hover {
   background-color: #a63a33;
-  box-shadow: 0px 0px 0px 3px #dac898 inset;
+  box-shadow: 0px 0px 0px 6px #dac898 inset;
   color: #dac898;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #nav-links a:hover {
   background-color: #dac898;
@@ -240,6 +242,9 @@
   padding: 20px;
   text-align: center;
 }
+.header p {
+  color: #dac898;
+}
 .interest-box {
   color: #dac898;
   display: inline-block;
@@ -416,6 +421,7 @@
   float: right;
   font-size: 1.5rem;
   padding: 18px 28px;
+  transition: .1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .nav-toggle:hover {
   background-color: #dac898;
@@ -426,12 +432,44 @@
   height: 100%;
   width: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0px 0px 0px 0px #1a1b18 inset;
+}
+.personal-portfolio:hover {
+  box-shadow: 0px 0px 0px 96px #1a1b18 inset;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-size: 24px;
+}
+.portfolio-personal button {
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  background: none;
+  cursor: pointer;
 }
 .personal-portfolio h2 {
   display: flex;
-  height: 270px;
-  justify-content: center;
-  line-height: 270px;
+  height: 360px;
+  line-height: 360px;
+  vertical-align: middle;
+  z-index: 1;
+}
+.personal-portfolio-img-container {
+  position: absolute;
+  height: 360px;
+  z-index: -1;
+}
+.personal-portfolio-img-container img {
+  display: inline-block;
+  height: 100%;
+  margin:auto;
+  object-fit: cover;
+  object-position: auto auto;
+  width: 100%;
+  opacity: 0.25;
   vertical-align: middle;
 }
 .picture-of-me1 {
@@ -474,11 +512,14 @@
   width: 100%;
 }
 .portfolio-personal {
-  background-color: rgba(255, 250, 240, 0.025);
   display: flex;
-  height: 270px;
+  height: 360px;
   position: relative;
   width: 100%;
+}
+.portfolio-personal a {
+  text-decoration: none;
+  color: inherit;
 }
 .portfolio-programming {
   height: 900px;
@@ -505,7 +546,7 @@
 }
 .programming-portfolio-img-container {
   display: flex;
-  top:48px;
+  top: 48px;
   height: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -588,12 +629,17 @@
   text-decoration: none;
   vertical-align: middle;
   width: 200px;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume-link>a:first-child:hover {
   background-color: #dac898;
   border-color: #dac898;
   color: #1a1b18;
   transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.resume-link>a:last-child:hover {
+  box-shadow: 0px 0px 0px 6px #dac898 inset;
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume-link-container>p {
   font-size: 48px;
@@ -666,6 +712,7 @@ form {
   position: fixed;
   z-index: 99999999;
 }
+
 .button-signup {
   color: #a63a33;
   background-color: #fffaf0;
@@ -678,6 +725,10 @@ form {
   height: 50px;
   width: 100%;
   transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.button-signup.enable {
+  color: #a63a33;
+  border: solid 3px #a63a33;
 }
 .button-guest {
   color: #76b598;
@@ -717,7 +768,7 @@ form {
   position: fixed;
   width: 420px;
   justify-content: left;
-  font-size: 18px;;
+  font-size: 18px;
 }
 .signup-content fieldset {
   display: flex;
@@ -1249,7 +1300,7 @@ form {
   }
 }
 body {
-  background-color: hsl(72, 4%, 10%);
+  background-color: #1a1b18;
   font-size: 20px;
   margin: 0px;
 }
