@@ -53,6 +53,7 @@
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
   cursor: pointer;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #progImg1 {
   top: 0px;
@@ -172,8 +173,8 @@
 }
 .copyright p {
   color: hsl(72, 4%, 10%);
-  font-size: 16px;
-  padding: 14px;
+  font-size: 14px;
+  padding: 16px;
   text-align: center;
 }
 .education-container {
@@ -222,6 +223,7 @@
 }
 .footer-link a:hover {
   opacity: 50%;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .footer-logo {
   width: 360px;
@@ -305,6 +307,7 @@
 }
 .link-icon:hover {
   opacity: 75%;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .link-icons {
   bottom: 0px;
@@ -387,7 +390,7 @@
 .main-section p>a:hover {
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
-  text-decoration: underline;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .nav-header {
   align-items: center;
@@ -417,6 +420,7 @@
 .nav-toggle:hover {
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .personal-portfolio {
   height: 100%;
@@ -556,9 +560,11 @@
 .programming-portfolio-button>p>a:hover {
   background-color: #1a1b18;
   color: #fffaf0;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .programming-portfolio-button>p>a:hover img{
   filter: invert(88%) sepia(24%) saturate(235%) hue-rotate(323deg) brightness(107%) contrast(105%);
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume {
   height: max-content;
@@ -587,6 +593,7 @@
   background-color: #dac898;
   border-color: #dac898;
   color: #1a1b18;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume-link-container>p {
   font-size: 48px;
@@ -660,22 +667,23 @@ form {
   z-index: 99999999;
 }
 .button-signup {
-  color: #fffaf0;
+  color: #a63a33;
+  background-color: #fffaf0;
   border: solid 3px #a63a33;
   font-family: inherit;
-  font-size: 16px;
-  background-color: #a63a33;
+  font-size: 18px;
   border-radius: 50px;
   margin: 0px 0px 5px 0px;
   position: relative;
   height: 50px;
   width: 100%;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .button-guest {
   color: #76b598;
   border:solid 3px #76b598;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #fffaf0;
   border-radius: 50px;
   margin: 5px 0px 0px 0px;
@@ -683,10 +691,21 @@ form {
   position: relative;
   height: 50px;
   width: 100%;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .button-guest,
 .button-signup:hover {
   cursor: pointer;
+}
+.button-guest:hover {
+  color: #fffaf0;
+  background-color: #76b598;
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.button-signup:hover {
+  color: #fffaf0;
+  background-color: #a63a33;
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .signup-content {
   background-color: #fffaf0;
@@ -696,17 +715,21 @@ form {
   height: 600px;
   padding: 25px;
   position: fixed;
-  width: 450px;
+  width: 420px;
   justify-content: left;
+  font-size: 18px;;
 }
 .signup-content fieldset {
   display: flex;
   justify-content: center;
   border: solid 3px #1a1b18;
   border-radius: 100px;
+  transition: .1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .signup-field.focused {
+  color:#76b598;
   border: solid 3px #76b598;
+  transition: .1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .signup-content legend {
   font-size: 18px;
@@ -715,14 +738,14 @@ form {
 }
 .signup-content h1 {
   font-size: 48px;
-  padding-top: 50px;
+  padding-top: 48px;
 }
 .signup-content-drop {
   border-radius: 25px;
   box-shadow: 10px -10px 0px #76b598;
   padding: 25px;
   height: 600px;
-  width: 450px;
+  width: 420px;
 }
 .signup-content input {
   background: transparent;
@@ -734,44 +757,144 @@ form {
   outline: none;
   width: 90%;
 }
+
+.signup-confirm {
+  display: flex;
+  vertical-align: middle;
+}
+.signup-confirm input {
+  width: 16px;
+  height: 16px;
+  border: #1a1b18 3px solid;
+}
+.signup-confirm label {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  padding-top: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.signup-confirm label>input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: #1a1b18 3px solid;
+  background-color: #fffaf0;
+}
+
+/* On mouse-over, add a grey background color */
+.signup-confirm label:hover input ~ .checkmark {
+  background-color: #ccc;
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* When the checkbox is checked, add a blue background */
+.signup-confirm label>input:checked ~ .checkmark {
+  background-color: #1a1b18;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.signup-confirm label>input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.signup-confirm label .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #fffaf0;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 .signup-dob b {
   font-size: 18px;
 }
-.signup-gender {
-  display: flex;
+.signup-dob select {
   font-size: 16px;
-  position: relative;
-  align-items: center;
-  vertical-align: middle;
-  width: 100%;
-}
-.signup-gender b {
-  font-size: 18px;
-}
-.signup-gender .check {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #1a1b18;
-  display: inline-block;
-  opacity: 0;
-}
-.signup-gender input[type="radio"] {
-  background-color: none;
-  cursor: pointer;
-  margin: 10px;
-  font: inherit;
-  color: currentColor;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #1a1b18;
-  border-radius: 50%;
-  position: relative;
-}
-.signup-gender input:checked + .check{
-  opacity: 0;
+  font-family: inherit;
+  font-weight: bold;
+  padding-left: 4px;
+  border: #1a1b18 3px solid;
+  border-radius: 50px;
+  background-color: #fffaf0;
 }
 
+.signup-gender {
+  position: relative;
+  color: #1a1b18;
+  font-size: 18px;
+}
+.signup-gender input {
+  display: none;
+}
+.signup-gender > label {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  margin-right: 12px;
+  padding-left: 24px;
+  cursor: pointer;
+}
+/* this creates the outer circle for faux radio button */
+.signup-gender > label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 0;
+  border: 3px solid #1a1b18;
+  border-radius: 50%;
+}
+/* this creates the inner circle for active faux radio button */
+.signup-gender > label:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 8px;
+  margin-top: 0;
+  background: #1a1b18;
+  border-radius: 8px;
+  transition: .1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.signup-gender :checked + label:after {
+  height: 8px;
+  width: 8px;
+  margin-top: -4px;
+  left: 5px;
+}
 
 .social-box {
   color: #dac898;

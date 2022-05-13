@@ -32,7 +32,6 @@ function changeNavPosition() {
 function addBlur() {
   navbar.style.backgroundColor = "rgba(26, 27, 24, 0.75)";
   navbar.style.backdropFilter = "blur(25px)";
-  //navStyle.classList.toggle('navbar-blur');
   navbar.style.boxShadow = '0px 5px 50px rgba(0, 0, 0,0.4)';
 }
 function removeBlur() {
@@ -42,19 +41,6 @@ function removeBlur() {
     navbar.style.boxShadow = '0px 0px 0px rgba(0, 0, 0,0)';
   }
 }
-
-/*
-window.onload = function(){
-  document.querySelector('.btn').onclick = function(){
-      if(this.className.match('btn_red')) {
-          this.className = 'btn';
-      }
-      else {
-          this.className = 'btn btn_red';
-      }
-  };
-};
-*/
 
 function checkWidth() {
   if (window.screen.width > 900 && navOpen) {
@@ -112,7 +98,7 @@ function removeSignup() {
 function setFocused1() {
   var resultName = document.querySelectorAll("#field1");
   for (result of resultName) {
-      result.classList.add('focused');
+    result.classList.add('focused');
   }
 }
 
@@ -147,6 +133,89 @@ for (result of resultName) {
 for (result of resultEmail) {
   result.addEventListener("focusin", setFocused2);
   result.addEventListener("focusout", unsetFocused2);
+}
+
+function focusField(input) {
+  input.children[1].focus();
+}
+
+const yearSelect = document.getElementById("year");
+const monthSelect = document.getElementById("month");
+const daySelect = document.getElementById("day");
+
+const months = ["January", "February", "March", "April",
+"May", "June", "July", "August", "September", "October",
+"November", "December"];
+
+(function populateMonths() {
+  for (let i = 0; i < months.length; i++) {
+    const option = document.createElement("option");
+    option.textContent = months[i];
+    monthSelect.appendChild(option);
+  }
+  monthSelect.value = "January";
+})();
+
+let previousDay;
+
+function populateDays(month) {
+  while (daySelect.firstChild) {
+    daySelect.removeChild(daySelect.firstChild);
+  }
+
+  let dayNum;
+  let year = yearSelect.value;
+
+  if (month === "January" || month === "March" || month === "May" || 
+      month === "July" || month === "August" || month === "October" ||
+      month === "December") {
+    dayNum = 31;
+  } else if (month === "April" || month === "June" || 
+             month === "September" || month === "November") {
+    dayNum = 30;
+  } else {
+    if (new Date(year, 1, 29).getMonth() === 1) {
+      dayNum = 29;
+    } else {
+      dayNum = 28;
+    }
+  }
+
+  for (let i = 1; i <= dayNum; i++) {
+    const option = document.createElement("option");
+    option.textContent = i;
+    daySelect.appendChild(option);
+  }
+  if (previousDay) {
+    daySelect.value = previousDay;
+
+    while (daySelect.value === "") {
+      daySelect.value = --previousDay;
+    }
+  }
+}
+
+function populateYears() {
+  let year = new Date().getFullYear();
+
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement("option");
+    option.textContent = year - i;
+    yearSelect.appendChild(option);
+  }
+}
+
+populateDays(monthSelect.value);
+populateYears();
+
+yearSelect.onchange = function() {
+  populateDays(monthSelect.value);
+}
+monthSelect.onchange = function() {
+  populateDays(monthSelect.value);
+}
+daySelect.onchange = function() {
+  previousDay = daySelect.value;
 }
 
 // Typing animation
@@ -206,4 +275,7 @@ window.onload = function() {
   }
 
 };
+
+var copyrightYear = document.getElementsByClassName(".copyright");
+let thisYear = new Date().getFullYear();
 

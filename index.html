@@ -14,48 +14,38 @@
     <form id="signup">
       <div class="signup-content-drop"></div>
       <div class="signup-content">
-        <h1>Register</h1>
+        <h1>Sign Up</h1>
         <br><hr><br>
-        <fieldset class="signup-field" id="field1">
+        <fieldset class="signup-field" id="field1" onclick="focusField(this)">
           <legend id="legend1"><b>Name:</b></legend>
           <input type="text" id="userName">
         </fieldset>
-        <fieldset class="signup-field" id="field2">
+        <fieldset class="signup-field" id="field2" onclick="focusField(this)">
           <legend id="legend2"><b>Email:</b></legend>
           <input type="text" id="userEmail">
         </fieldset>
         <br>
         <div class="signup-gender">
           <b>Gender:</b>
-          <input type="radio" name="gend">Male
-          <div class="check"></div>
-          <input type="radio" name="gend">Female
-          <div class="check"></div>
+          <input name="gender" type="radio" id="click" class="hide" checked>
+          <label for="click"><b>Male</b></label>
+        
+          <input name="gender" type="radio" id="touch" class="hide">
+          <label for="touch"><b>Female</b></label>
         </div>
+        <br>
         <div class="signup-dob">
           <b>Date of Birth:</b>
-          <select name="DOB-day">
-            <option>1</option>
-          </select>
-          <select name="DOB-month">
-            <option>January</option>
-            <option>February</option>
-            <option>March</option>
-            <option>April</option>
-            <option>May</option>
-            <option>June</option>
-            <option>July</option>
-            <option>August</option>
-            <option>September</option>
-            <option>October</option>
-            <option>November</option>
-            <option>December</option>
-          </select>
-          <select name="DOB-year">
-            <option>2022</option>
-          </select>
+          <select name="day" id="day" style="text-align: right;"></select>
+          <select name="month" id="month"></select>
+          <select name="year" id="year" style="text-align: right;"></select>
         </div>
-        <br><br><hr><br>
+        <br>
+        <div class="signup-confirm">
+          <label><input type="checkbox" name="confirm"><span class="checkmark"></span>
+          <b>This information is correct.</b></label>
+        </div>
+        <br><hr><br>
         
         <button class="button-signup">
           <p><b>Sign Up</b></p>
