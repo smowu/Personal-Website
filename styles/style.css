@@ -123,6 +123,24 @@
   vertical-align: middle;
   z-index: 2;
 }
+.achievement-box {
+  color: #1a1b18;
+  display: inline-block;
+  font-size: 24px;
+  padding: 25px;
+}
+.achievement-icon {
+  border-radius: 50%;
+  height: 160px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.achievement-icon>img {
+  filter: invert(8%) sepia(7%) saturate(695%) hue-rotate(39deg) brightness(95%) contrast(93%);
+}
+.achievement-icon h1 {
+  font-size: 96px;
+}
 .button-container {
   position: relative;
   margin-bottom: 24px;
@@ -222,6 +240,7 @@
   display: inline-block;
   font-size: 24px;
   padding: 25px;
+  text-decoration: none;
 }
 .game-icon {
   border-radius: 50%;
@@ -246,6 +265,10 @@
   height: max-content;
   position: relative;
   width: 100%;
+  text-align: center;
+}
+.fav-songs-container h6{
+  opacity: 0.2;
 }
 .fav-songs-header h1 {
   color: #fffaf0;
@@ -308,8 +331,14 @@
   padding: 20px;
   text-align: center;
 }
-.header p {
+.header b {
+  position: relative;
+  font-size: 16px;
+  display: flex;
   color: #dac898;
+  justify-content: center;
+  margin-top: -6px;
+  margin-bottom: -18px;
 }
 .interest-box {
   color: #dac898;
@@ -612,7 +641,7 @@
 }
 .programming-portfolio-img-container {
   display: flex;
-  top: 48px;
+  top: 64px;
   height: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -622,7 +651,7 @@
 }
 .programming-portfolio>h1 {
   padding: 24px 24px 24px 48px;
-  height: 150px;
+  height: 128px;
   width: 50%;
   display: table-caption;
 }
@@ -630,7 +659,6 @@
   bottom: 0px;
   position: absolute;
   width: 100%;
-  height: 180px;
 }
 .programming-portfolio-button>p {
   display: flex;
@@ -674,6 +702,7 @@
   transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume {
+  
   height: max-content;
   position: relative;
 }
@@ -727,7 +756,7 @@
   height: 600px;
   margin: auto;
   object-fit: cover;
-  object-position: 0px 0px;
+  object-position: -32px 0px;
   width: 420px;
   z-index: 5;
 }
