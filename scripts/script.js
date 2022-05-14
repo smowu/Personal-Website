@@ -218,6 +218,20 @@ daySelect.onchange = function() {
   previousDay = daySelect.value;
 }
 
+var checker = document.getElementById('checkInfo');
+var btn = document.getElementById('buttonSignup');
+
+checker.onchange = function(){
+if (this.checked) {
+  btn.disabled = false;
+  btn.classList.add("enable");
+} else {
+  btn.disabled = true;
+  btn.classList.remove("enable");
+}
+
+}
+
 function welcome() {
   var name = document.getElementById("userName").value;
 

@@ -42,14 +42,15 @@
         </div>
         <br>
         <div class="signup-confirm">
-          <label><input type="checkbox" name="confirm"><span class="checkmark"></span>
+          <label><input type="checkbox" name="confirm" id="checkInfo">
+            <span class="checkmark"></span>
           <b>This information is correct.</b></label>
         </div>
         <br>
         <input type="reset" value="Clear Form" class="reset-form">
         <br><hr><br>
         <div class="button-container">
-          <button onclick="welcome()" class="button-signup" id="buttonSignup">
+          <button onclick="welcome()" class="button-signup" id="buttonSignup" disabled="true">
             <p><b>Sign Up</b></p>
           </button>
           <button onclick="removeSignup()" class="button-guest">

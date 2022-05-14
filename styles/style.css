@@ -834,10 +834,14 @@ form {
   height: 50px;
   width: 100%;
   transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  pointer-events: none;
+  opacity: 0.25;
 }
 .button-signup.enable {
-  color: #a63a33;
-  border: solid 3px #a63a33;
+  pointer-events:inherit;
+  opacity: 1;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .button-guest {
   color: #76b598;
