@@ -1179,6 +1179,48 @@ form {
   width: 100%;
   z-index: -9998;
 }
+.video-portfolio-box {
+  width: 100%;
+  height: 820px;
+  position: relative;
+  padding-top: 96px;
+}
+.video-portfolio-container {
+  height: max-content;
+  position: relative;
+  width: 100%;
+}
+.video-portfolio-content {
+  background-color: #1a1b18;
+  color:#fffaf0;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+.video-portfolio-content iframe {
+  border: 3px solid #fffaf0;
+  border-radius: 32px;
+  margin: 24px;
+}
+.video-portfolio-content h2 {
+  padding: 32px;
+}
+.video-portfolio-header {
+  background-color: #1a1b18;
+  color:#fffaf0;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.video-portfolio-header h1 {
+  font-size: 48px;
+  line-height: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  z-index: 2;
+}
 ::-webkit-scrollbar {
   width: 0.4em;
 }
