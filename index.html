@@ -49,7 +49,7 @@
         <input type="reset" value="Clear Form" class="reset-form">
         <br><hr><br>
         <div class="button-container">
-          <button onclick="welcome()" class="button-signup" id="buttonSignup" disabled="true">
+          <button onclick="welcome()" class="button-signup" id="buttonSignup">
             <p><b>Sign Up</b></p>
           </button>
           <button onclick="removeSignup()" class="button-guest">
@@ -60,7 +60,7 @@
       </div>
     </form>
     <div id="main" class="main-section">
-      <div class="header" id="header"><b>Welcome Guest!</b></div>
+      <div class="header" id="header"><label id="welcome"><b>Welcome Guest!</b></label></div>
       <div id="navbar">
         <script src="./scripts/script.js"></script>
         <div class="container flex-nav">

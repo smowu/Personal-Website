@@ -88,13 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     changeNavPosition();
   });
-
-  const checkInfo = document.querySelector("confirm");
-  checkInfo.addEventListener("checked", () => {
-    var signup = document.getElementById("buttonSignup");
-    signup.disabled = "false";
-    signup.classList.add("enable");
-  });
 });
 
 function removeSignup() {
@@ -228,11 +221,12 @@ daySelect.onchange = function() {
 function welcome() {
   var name = document.getElementById("userName").value;
 
-  if (name != "") {
+  if (name.trim() != "") {
+    document.getElementById('welcome').innerHTML = "Welcome " + name + "!";
     alert("Welcome " + name);
     removeSignup();
   }
-
+  
 }
 
 // Typing animation
