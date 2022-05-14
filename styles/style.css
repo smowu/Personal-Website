@@ -701,8 +701,16 @@
   filter: invert(88%) sepia(24%) saturate(235%) hue-rotate(323deg) brightness(107%) contrast(105%);
   transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+.signup-content input[type="reset"]{
+  color: #a63a33;
+  font-size: 16px;
+  font-weight: bold;
+  border: 3px solid #a63a33;
+  border-radius: 32px;
+  width: 100%;
+  cursor: pointer;
+}
 .resume {
-  
   height: max-content;
   position: relative;
 }
@@ -883,7 +891,7 @@ form {
 }
 .signup-content h1 {
   font-size: 48px;
-  padding-top: 48px;
+  padding-top: 16px;
 }
 .signup-content-drop {
   border-radius: 25px;

@@ -9,8 +9,8 @@ var isSticky = false;
 navbar.style.backdropFilter = "blur(0px)";
 
 function backToTop() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 window.onresize = function() {checkWidth()};
@@ -293,6 +293,6 @@ window.onload = function() {
 
 };
 
-var copyrightYear = document.getElementsByClassName(".copyright");
-let thisYear = new Date().getFullYear();
+// var copyrightYear = document.getElementsByClassName(".copyright");
+// let thisYear = new Date().getFullYear();
 
