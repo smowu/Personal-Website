@@ -38,24 +38,22 @@
 #nav-links a {
   color: #dac898;
   text-decoration: none;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #nav-links a.active {
   background-color: #a63a33;
   box-shadow: 0px 0px 0px 3px #dac898 inset;
   color: #dac898;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #nav-links a.active:hover {
   background-color: #a63a33;
   box-shadow: 0px 0px 0px 6px #dac898 inset;
   color: #dac898;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #nav-links a:hover {
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
   cursor: pointer;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #progImg1 {
   top: 0px;
@@ -311,10 +309,10 @@
   color: #1a1b18;
   line-height: 32px;
   text-decoration: none;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .footer-link a:hover {
   opacity: 50%;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .footer-logo {
   width: 360px;
@@ -404,10 +402,10 @@
 .link-icon {
   filter: invert(8%) sepia(7%) saturate(695%) hue-rotate(39deg) brightness(95%) contrast(93%);
   padding: 2px;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .link-icon:hover {
   opacity: 75%;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .link-icons {
   bottom: 0px;
@@ -486,11 +484,11 @@
   text-decoration: none;
   vertical-align: middle;
   width: 320px;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .main-section p>a:hover {
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .nav-header {
   align-items: center;
@@ -521,7 +519,6 @@
 .nav-toggle:hover {
   background-color: #dac898;
   color: hsl(72, 4%, 10%);
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .personal-portfolio {
   height: 100%;
@@ -534,7 +531,6 @@
 }
 .personal-portfolio:hover {
   box-shadow: 0px 0px 0px 96px #1a1b18 inset;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-size: 36px;
 }
 .portfolio-personal button {
@@ -691,11 +687,11 @@
   text-align: center;
   text-decoration: none;
   width: max-content;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .programming-portfolio-button>p>a:hover {
   background-color: #1a1b18;
   color: #fffaf0;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .programming-portfolio-button>p>a:hover img{
   filter: invert(88%) sepia(24%) saturate(235%) hue-rotate(323deg) brightness(107%) contrast(105%);
@@ -714,7 +710,6 @@
 .signup-content input[type="reset"]:hover {
   color: #fffaf0;
   background-color: #a63a33;
-  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume {
   height: max-content;
@@ -744,11 +739,9 @@
   background-color: #dac898;
   border-color: #dac898;
   color: #1a1b18;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume-link>a:last-child:hover {
   box-shadow: 0px 0px 0px 6px #dac898 inset;
-  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .resume-link-container>p {
   font-size: 48px;
@@ -833,7 +826,7 @@ form {
   position: relative;
   height: 50px;
   width: 100%;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   pointer-events: none;
   opacity: 0.25;
@@ -841,7 +834,7 @@ form {
 .button-signup.enable {
   pointer-events:inherit;
   opacity: 1;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .button-guest {
   color: #76b598;
@@ -854,7 +847,7 @@ form {
   position: relative;
   height: 50px;
   width: 100%;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .button-guest,
 .button-signup:hover {
@@ -863,12 +856,10 @@ form {
 .button-guest:hover {
   color: #fffaf0;
   background-color: #76b598;
-  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .button-signup:hover {
   color: #fffaf0;
   background-color: #a63a33;
-  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .signup-content {
   background-color: #fffaf0;
